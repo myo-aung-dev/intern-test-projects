@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Data Rendering</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f9; }
+        .post-card { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h3 { margin: 0 0 10px; color: #333; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+
+    <h1>Posts List</h1>
+    <div id="posts-container"></div>
+
+    <script>
+        // JSON Data
+        const posts = [
+          {
+            "userId": 1,
+            "id": 9,
+            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body": "quia et suscipit..."
+          },
+          {
+            "userId": 1,
+            "id": 10,
+            "title": "qui est esse",
+            "body": "est rerum tempore vitae..."
+          }
+        ];
+
+        // HTML Container ကို လှမ်းယူခြင်း
+        const container = document.getElementById('posts-container');
+
+        // Data တစ်ခုချင်းစီအတွက် HTML Element ဖန်တီးပြီး ထည့်သွင်းခြင်း
+        posts.forEach(post => {
+            const card = document.createElement('div');
+            card.className = 'post-card';
+            card.innerHTML = `
+                <h3>${post.id}. ${post.title}</h3>
+                <p>${post.body}</p>
+            `;
+            container.appendChild(card);
+        });
+    </script>
+
+</body>
+</html>

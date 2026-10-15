@@ -1,0 +1,47 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size:
+
+2. 5rem;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 15px;
+    /* Hover effect */
+    transition: color
+
+0. 3s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Responsive Design - ဖုန်းနဲ့ကြည့်ရင်ပြောင်း */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size:
+
+1. 8rem;
+    }
+}

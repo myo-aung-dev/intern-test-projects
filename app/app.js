@@ -1,6 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ၁။ ယနေ့ရက်စွဲကို YYYY-MM-DD ပုံစံဖြင့် ရယူခြင်း
     const today = new Date().toISOString().split('T')[0];
+
+    const express = require('express');
+    const app = express();
+    const PORT = 3000;
+
+    // Root Route 
+    app.get('/', (req, res) => {
+        res.send('Hello, Node.js Server is successfully running!');
+    });
+
+    // Server စတင်လည်ပတ်မည့် Port
+    app.listen(PORT, () => {
+        console.log(`Server is running at http://localhost:${PORT}`);
+    });
     
     // ၂။ date input တွင် min attribute သတ်မှတ်ပေးခြင်း (ယခင်ရက်များကို ရွေးမရအောင်)
     const dateInput = document.getElementById('date');
